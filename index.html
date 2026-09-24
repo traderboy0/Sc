@@ -3,146 +3,603 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>TRADE WITH SUNIL | Stock Market</title>
+
+<meta name="description"
+content="TRADE WITH SUNIL - Stock Market Education, Market Analysis, Trading Setups and Risk Management.">
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+html{
+    scroll-behavior:smooth;
+}
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#020708;
+    color:#fff;
+    overflow-x:hidden;
+}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+.container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:10px;
+}
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+/* HEADER */
+.hero{
+    text-align:center;
+    padding:15px 5px 8px;
+}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+.hero h1{
+    font-size:clamp(42px,9vw,82px);
+    line-height:.9;
+    font-weight:1000;
+    color:#49ff00;
+    text-shadow:
+        0 0 8px #00ff00,
+        4px 4px 0 #000;
+    letter-spacing:-3px;
+}
 
-  .feature-item:last-child { border-bottom: none; }
+.title-box{
+    display:inline-block;
+    margin-top:14px;
+    padding:9px 25px;
+    background:#ffe500;
+    color:#050505;
+    font-size:clamp(28px,6vw,58px);
+    font-weight:1000;
+    font-style:italic;
+    transform:skew(-7deg);
+    box-shadow:4px 5px 0 #000;
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+.tagline{
+    margin:18px 0;
+    font-size:clamp(21px,4vw,36px);
+    font-weight:bold;
+    font-style:italic;
+}
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+.tagline span{
+    color:#38ff00;
+    padding:0 8px;
+}
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+/* PROFILE */
+.profile{
+    width:min(88vw,390px);
+    aspect-ratio:1/1;
+    margin:15px auto 25px;
+    border:6px solid #39ff14;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        radial-gradient(circle,#17301b,#06100d 65%,#020505);
+    box-shadow:
+        0 0 15px #00ff00,
+        0 0 45px rgba(0,255,0,.45);
+    position:relative;
+    overflow:hidden;
+}
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+.profile:before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:2px solid rgba(57,255,20,.25);
+    animation:pulse 2s infinite;
+}
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+.profile-content{
+    position:relative;
+    z-index:2;
+}
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+.profile h2{
+    color:#ffe500;
+    font-size:clamp(22px,5vw,38px);
+    font-style:italic;
+    font-weight:1000;
+    text-shadow:3px 3px #000;
+}
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+.profile p{
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.profile h3{
+    color:#fff;
+    font-size:clamp(42px,9vw,68px);
+    font-weight:1000;
+    text-shadow:4px 4px #000;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(.85);
+        opacity:.2;
+    }
+    50%{
+        transform:scale(1.15);
+        opacity:.7;
+    }
+}
+
+/* FEATURES */
+.features{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.feature{
+    width:100%;
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:8px 14px;
+    border:3px solid #39ff14;
+    border-radius:45px;
+    background:
+        linear-gradient(90deg,#06100c,#102018,#06100c);
+    box-shadow:
+        0 0 8px #00ff00,
+        inset 0 0 18px rgba(0,255,0,.12);
+    animation:glow 2.5s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 5px #00ff00;
+    }
+    to{
+        box-shadow:0 0 14px #00ff00;
+    }
+}
+
+.icon{
+    width:58px;
+    height:58px;
+    min-width:58px;
+    border-radius:50%;
+    background:#24e900;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    box-shadow:0 0 12px #00ff00;
+}
+
+.feature-text{
+    font-size:clamp(17px,3.5vw,30px);
+    font-weight:1000;
+    line-height:1.05;
+}
+
+.green{
+    color:#39ff14;
+}
+
+.right-icon{
+    margin-left:auto;
+    font-size:30px;
+}
+
+/* TELEGRAM */
+.telegram{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    width:100%;
+    max-width:780px;
+    margin:25px auto 18px;
+    padding:14px 18px;
+    border-radius:60px;
+    background:linear-gradient(
+        90deg,
+        #4dff00,
+        #b8ff00,
+        #4dff00
+    );
+    color:#000;
+    text-decoration:none;
+    box-shadow:
+        0 0 15px #39ff14,
+        0 0 40px rgba(57,255,20,.45);
+    transition:.2s ease;
+}
+
+.telegram:hover{
+    transform:scale(1.02);
+}
+
+.telegram-logo{
+    width:65px;
+    height:65px;
+    min-width:65px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#159de0;
+}
+
+.telegram-logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.telegram-text{
+    text-align:center;
+}
+
+.join{
+    display:block;
+    font-size:clamp(30px,6vw,55px);
+    font-weight:1000;
+    line-height:.9;
+}
+
+.channel{
+    display:inline-block;
+    margin-top:6px;
+    padding:4px 15px;
+    background:#000;
+    color:#fff;
+    font-size:clamp(23px,5vw,42px);
+    font-weight:1000;
+}
+
+.rocket{
+    font-size:48px;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px;
+    border:3px solid #39ff14;
+    border-radius:18px;
+    background:#030b0d;
+    margin-bottom:15px;
+}
+
+.warning{
+    font-size:43px;
+    min-width:48px;
+}
+
+.disclaimer strong{
+    color:#ffe500;
+    font-size:21px;
+}
+
+.disclaimer p{
+    color:#eee;
+    font-size:14px;
+    line-height:1.4;
+    margin-top:3px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .container{
+        padding:7px;
+    }
+
+    .hero{
+        padding-top:12px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-2px;
+    }
+
+    .title-box{
+        font-size:29px;
+        padding:8px 15px;
+    }
+
+    .tagline{
+        font-size:21px;
+        margin:15px 0;
+    }
+
+    .profile{
+        width:88vw;
+        max-width:350px;
+        border-width:5px;
+        margin:12px auto 20px;
+    }
+
+    .profile h2{
+        font-size:24px;
+    }
+
+    .profile h3{
+        font-size:52px;
+    }
+
+    .feature{
+        min-height:65px;
+        padding:6px 9px;
+        gap:9px;
+        border-width:3px;
+    }
+
+    .icon{
+        width:48px;
+        height:48px;
+        min-width:48px;
+        font-size:23px;
+    }
+
+    .feature-text{
+        font-size:16px;
+    }
+
+    .right-icon{
+        font-size:24px;
+    }
+
+    .telegram{
+        gap:9px;
+        padding:11px 8px;
+    }
+
+    .telegram-logo{
+        width:52px;
+        height:52px;
+        min-width:52px;
+    }
+
+    .join{
+        font-size:29px;
+    }
+
+    .channel{
+        font-size:23px;
+        padding:4px 10px;
+    }
+
+    .rocket{
+        font-size:35px;
+    }
+
+    .disclaimer{
+        padding:10px;
+        gap:9px;
+    }
+
+    .warning{
+        font-size:34px;
+        min-width:38px;
+    }
+
+    .disclaimer strong{
+        font-size:17px;
+    }
+
+    .disclaimer p{
+        font-size:11px;
+    }
+}
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .title-box{
+        font-size:25px;
+    }
+
+    .feature-text{
+        font-size:14px;
+    }
+
+    .right-icon{
+        display:none;
+    }
+
+    .join{
+        font-size:25px;
+    }
+
+    .channel{
+        font-size:19px;
+    }
+
+    .rocket{
+        font-size:28px;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<div class="container">
 
-  <h1>Munaaf</h1>
+    <!-- HEADER -->
+    <section class="hero">
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
+        <h1>STOCK MARKET</h1>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+        <div class="title-box">
+            TRADE WITH SUNIL
+        </div>
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+        <div class="tagline">
+            Learn
+            <span>●</span>
+            Trade
+            <span>●</span>
+            <b style="color:#ffe500;">Grow</b>
+        </div>
 
-  <p class="hindi-quote">     ,     </p>
+    </section>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
+    <!-- PROFILE -->
+    <div class="profile">
+
+        <div class="profile-content">
+
+            <h2>STOCK MARKET</h2>
+
+            <p>WITH</p>
+
+            <h3>SUNIL</h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- FEATURES -->
+    <div class="features">
+
+        <div class="feature">
+            <div class="icon">📈</div>
+
+            <div class="feature-text">
+                STOCK MARKET <span class="green">SETUPS</span>
+            </div>
+
+            <div class="right-icon">🏆</div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">🎯</div>
+
+            <div class="feature-text">
+                TODAY'S <span class="green">MARKET ANALYSIS</span>
+            </div>
+
+            <div class="right-icon">📊</div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">💰</div>
+
+            <div class="feature-text">
+                SMART MONEY <span class="green">STRATEGIES & TIPS</span>
+            </div>
+
+            <div class="right-icon">💡</div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">👤</div>
+
+            <div class="feature-text">
+                5/5 EXPERT TRADING <span class="green">INSIGHTS TODAY</span>
+            </div>
+
+            <div class="right-icon">↗️</div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">🛡️</div>
+
+            <div class="feature-text">
+                RISK MANAGEMENT <span class="green">GUIDANCE</span>
+            </div>
+
+            <div class="right-icon">✅</div>
+        </div>
+
+    </div>
+
+
+    <!-- TELEGRAM -->
+    <a
+        class="telegram"
+        href="https://t.me/+Hg-1ZaCJQuc5OWVl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join TRADE WITH SUNIL Telegram Channel"
+    >
+
+        <div class="telegram-logo">
+            <img
+                src="https://i.ibb.co/jkH4xVZN/In-Shot-20260924-103855973.jpg"
+                alt="TRADE WITH SUNIL Telegram Logo"
+            >
+        </div>
+
+        <div class="telegram-text">
+
+            <span class="join">
+                JOIN FREE
+            </span>
+
+            <span class="channel">
+                TRADE WITH SUNIL
+            </span>
+
+        </div>
+
+        <div class="rocket">
+            🚀
+        </div>
+
+    </a>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+
+        <div class="warning">
+            ⚠️
+        </div>
+
+        <div>
+
+            <strong>
+                Disclaimer:
+            </strong>
+
+            <p>
+                This channel is for educational and informational
+                purposes only. We are not SEBI registered.
+                Please consult a financial advisor before making
+                any investment decision.
+            </p>
+
+        </div>
+
+    </div>
+
 </div>
 
 </body>
